@@ -12,7 +12,7 @@ struct Block
    Block* next;
 };
 
-Block* head = {};
+Block* head = {nullptr};
 
 
 void init_head (){
@@ -20,6 +20,13 @@ void init_head (){
     head->free = true;
     head->next = nullptr;
     head->size = HEAP_SIZE - sizeof(Block);
+
+}
+
+void* alloc(size_t size) {
+
+    if (size == 0) return nullptr;
+
 
 }
 int main()
