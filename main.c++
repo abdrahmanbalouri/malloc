@@ -27,6 +27,11 @@ void* alloc(size_t size) {
 
     if (size == 0) return nullptr;
 
+    if (!head) {
+
+      init_head();
+    }
+
 
 }
 int main()
