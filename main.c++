@@ -1,5 +1,6 @@
 #include <array>
 #include <cstddef>
+#include<logic.h>
 /*<cstddef>: Places all definitions securely inside the std namespace (e.g., std::size_t).
  It may also optionally inject them into the global namespace depending on the compiler.*/
 
@@ -20,7 +21,6 @@ void init_head (){
     head->free = true;
     head->next = nullptr;
     head->size = HEAP_SIZE - sizeof(Block);
-
 }
 
 void* alloc(size_t size) {
@@ -28,9 +28,9 @@ void* alloc(size_t size) {
     if (size == 0) return nullptr;
 
     if (!head) {
-
       init_head();
     }
+
 
 
 }
